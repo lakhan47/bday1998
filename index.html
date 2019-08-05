@@ -11,15 +11,27 @@
   <body>
     <a-scene embedded arjs>
 
- 
-          
+       <a-assets>
+    <a-asset-item id="tree-obj" src="https://cdn.aframe.io/assets/model.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="https://cdn.aframe.io/assets/model.mtl"></a-asset-item>
+  </a-assets>
+
       
-      <a-assets>
+     <!-- 
+   <a-entity
+                obj-model="obj: url(https://cdn.aframe.io/assets/model.obj);
+                mtl: url(https://cdn.aframe.io/assets/model.mtl)">
+            </a-entity> -->
+
+
+       <!--<a-assets timeout="10000">
       <a-asset-item id="cake" src="https://cdn.aframe.io/assets/scene.gltf"></a-asset-item>
       </a-assets>
 
       <a-entity camera></a-entity>
-     <a-marker preset="hiro"> <a-entity gltf-model="#cake"></a-entity></a-marker>
+   <a-entity gltf-model="#cake"></a-entity>-->
+   <a-marker-camera preset='hiro'>  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+</a-marker-camera>
 
     </a-scene>
   </body>
