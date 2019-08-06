@@ -8,31 +8,25 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 
   </head>
-  <body>
+  <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs>
 
-       <a-assets>
-    <a-asset-item id="tree-obj" src="https://cdn.aframe.io/assets/model.obj"></a-asset-item>
-    <a-asset-item id="tree-mtl" src="https://cdn.aframe.io/assets/model.mtl"></a-asset-item>
-  </a-assets>
+            <a-assets >
+               <a-asset-item id="tree-obj" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets/10868_birthday-cake_v3.obj"></a-asset-item>
+               <a-asset-item  id="tree-mtl" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets/10868_birthday-cake_v3.mtl"></a-asset-item>
 
-      
-     <!-- 
-   <a-entity
-                obj-model="obj: url(https://cdn.aframe.io/assets/model.obj);
-                mtl: url(https://cdn.aframe.io/assets/model.mtl)">
-            </a-entity> -->
-
-
+               
+             </a-assets>
        <!--<a-assets timeout="10000">
       <a-asset-item id="cake" src="https://cdn.aframe.io/assets/scene.gltf"></a-asset-item>
       </a-assets>
 
       <a-entity camera></a-entity>
    <a-entity gltf-model="#cake"></a-entity>-->
-   <a-marker-camera preset='hiro'>  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
-</a-marker-camera>
+   <a-marker-camera preset='hiro'>  <a-entity scale="0.1 0.1 0.1" position="0.5 0.5 -0.5" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+ </a-marker-camera>
 
     </a-scene>
+
   </body>
 </html>
