@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
+    <title>Welcome To Augmented Reality</title>
+    <meta name="description" content="A-Frame">
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 
@@ -12,18 +12,20 @@
     <a-scene embedded arjs>
 
             <a-assets >
-               <a-asset-item id="tree-obj" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets/10868_birthday-cake_v3.obj"></a-asset-item>
-               <a-asset-item  id="tree-mtl" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets/10868_birthday-cake_v3.mtl"></a-asset-item>
+               <a-asset-item id="tree-obj" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets1/birthday_cake.obj"></a-asset-item>
+               <a-asset-item  id="tree-mtl" src="https://raw.githubusercontent.com/lakhan47/bday1998/master/assets1/birthday_cake.mtl"></a-asset-item>
 
                
              </a-assets>
+                   <a-text value="Happy Birthday Petu" position="-1 2 1" height="6" width="6" color="yellow"> </a-text>
+
        <!--<a-assets timeout="10000">
       <a-asset-item id="cake" src="https://cdn.aframe.io/assets/scene.gltf"></a-asset-item>
       </a-assets>
 
       <a-entity camera></a-entity>
    <a-entity gltf-model="#cake"></a-entity>-->
-   <a-marker-camera preset='hiro'>  <a-entity scale="2 3 5" position="0.5 -2 -0.5" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+   <a-marker-camera preset='hiro'>  <a-entity scale="0.10 0.10 0.10" position="0.5 -0.5 0.5" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
  </a-marker-camera>
 
     </a-scene>
